@@ -185,51 +185,6 @@ loc2:document.getElementById("loc2").value,
 loc3:document.getElementById("loc3").value
 };
 
-const prompt=`
-Write a children's story between 200 and 350 words for children aged 6-10.
-
-Use every one of these words naturally.
-
-Silly Names:
-${data.name1}
-${data.name2}
-${data.name3}
-
-Nouns:
-${data.noun1}
-${data.noun2}
-${data.noun3}
-${data.noun4}
-
-Adjectives:
-${data.adj1}
-${data.adj2}
-${data.adj3}
-${data.adj4}
-
-Verbs:
-${data.verb1}
-${data.verb2}
-${data.verb3}
-${data.verb4}
-
-Locations:
-${data.loc1}
-${data.loc2}
-${data.loc3}
-
-Requirements:
-- Funny
-- Positive ending
-- Every input used at least once
-- 200-350 words
-`;
-
-document.getElementById("story").innerHTML=
-`<h2>Your Prompt</h2>
-<p>This prompt is ready to send to ChatGPT or the OpenAI API:</p>
-<pre>${prompt}</pre>`;
-
 const response = await fetch("https://api.openai.com/v1/chat/completions", {
 method: "POST",
 headers: {
