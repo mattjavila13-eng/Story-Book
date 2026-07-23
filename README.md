@@ -229,6 +229,7 @@ document.getElementById("story").innerHTML=
 `<h2>Your Prompt</h2>
 <p>This prompt is ready to send to ChatGPT or the OpenAI API:</p>
 <pre>${prompt}</pre>`;
+
 const response = await fetch("https://api.openai.com/v1/chat/completions", {
 method: "POST",
 headers: {
