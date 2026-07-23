@@ -158,8 +158,6 @@ white-space:pre-wrap;
 
 <script>
 
-async function generateStory(){
-
 const data={
 name1:document.getElementById("name1").value,
 name2:document.getElementById("name2").value,
